@@ -30,8 +30,7 @@ namespace PrisonerAnalysis
                 prisoner.BookingDate = Convert.ToDateTime(values[6]);
                 DateTime tempDate;
                 if (DateTime.TryParse(values[7], out tempDate))
-                    prisoner.ReleaseDate = tempDate;
-               
+                    prisoner.ReleaseDate = tempDate;               
             }
             return prisoner;
 
@@ -39,7 +38,7 @@ namespace PrisonerAnalysis
 
         public bool IsReleased
         {
-            get { return ReleaseDate.HasValue; }            
+            get { return ReleaseDate.HasValue; }             
         }
 
         public int DayInPrison
@@ -61,7 +60,5 @@ namespace PrisonerAnalysis
                 }    
             }
         }      
-
-
     }
 }
