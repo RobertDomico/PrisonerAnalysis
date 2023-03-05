@@ -51,7 +51,7 @@ namespace PrisonerAnalysis
                 if (ReleaseDate.HasValue)
                 {
                     TimeSpan diff = ReleaseDate.Value - BookingDate.Value;
-                    return (int)Math.Ceiling(diff.TotalDays);
+                    return (int)Math.Floor(diff.TotalDays);
                 }
                 else
                 {
