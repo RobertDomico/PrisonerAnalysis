@@ -56,7 +56,7 @@ namespace PrisonerAnalysis
                 else
                 {
                     TimeSpan diff = DateTime.Now - BookingDate.Value;
-                    return (int)Math.Ceiling(diff.TotalDays);
+                    return (int)Math.Floor(diff.TotalDays);
                 }    
             }
         }      
